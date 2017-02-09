@@ -1,0 +1,18 @@
+block classes
+	- var homeclass = '.active'
+	- var chatclass = undefined
+	- var contactclass = undefined
+	- var aboutclass = undefined
+
+extends ../../template
+
+block content
+	.jumbotron
+		.container
+			h1.display-3 {{title}}
+			p This academy can teach you how to be good at computer sciences
+	.container
+		.row
+			.col-md-7(style="height: 400px")
+				iframe(width='560', height='315', src='{{link}}', frameborder='0', allowfullscreen='')
+				h3 {{label}}
