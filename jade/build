@@ -2,6 +2,6 @@
 
 for i in `find . -name \*.jade` ;
 do
-	jade $i;
+	./node_modules/jade/bin/jade.js $i;
 	mv `echo ${i%.*}`.html ../`echo ${i%.*}`.php;
 done

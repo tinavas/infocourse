@@ -14,7 +14,7 @@
 	   )
 	{
 		file_put_contents("php://stdout", "\nRequested: POST: " . $_SERVER['REQUEST_URI'] . "\n");
-		$author = addslashes($_REQUEST ['author'];
+		$author = addslashes($_REQUEST ['author']);
 		$text = addslashes(strip_tags ($_REQUEST ['text'], "<i><b><u><br><p><ul><li>"));
 		$time = date('Y-m-d, h:i:sa');
 		$code = addslashes(md5 ($author . $text . $uri));
