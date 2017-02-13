@@ -53,11 +53,27 @@
 				font-size: 1.5em;
 				float: left;
 			}
+			#all article {
+				border-top: 5px solid #eee;
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+			#all article>header {
+				display:inline-block;
+				margin-right:10px;
+				width: 45%;
+				height: 540px;
+			}
 			#all article>aside {
+				padding-top: 240px;
+				vertical-align: top;
 				font-size: 1.5em;
 				position: relative;
-				left: 50%;
+				/*left: 50%;*/
+				display:inline-block;
 				text-align: left;
+				width: 45%;
+				height: 540px;
 			}
 			
 			article.hideMe:after {
