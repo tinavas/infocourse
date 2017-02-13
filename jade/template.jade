@@ -16,7 +16,13 @@ html(lang='en')
 		link(rel='stylesheet', href='/css/extension.css')
 		script(src='/js/jquery.min.js')
 		script(src='/bootstrap/dist/js/bootstrap.min.js')
-	body
+		style(type='text/css').
+			footer {
+				color: white;
+			}
+
+		block styles
+	body(style="background-image: url('/128-61.jpg');")
 		block classes
 		nav.navbar.navbar-inverse
 			//default
