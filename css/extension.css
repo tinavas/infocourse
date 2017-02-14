@@ -1,7 +1,16 @@
 a.normal{color:#373a3c;}
 a.normal:visited{color:#373a3c;}
 a.normal:hover{color:#373a3c;}
-.btn-secondary{background-color:orange;color:black;}
-.btn-secondary:hover{background-color:green;color:white;}
-.btn-primary{background-color:green;color:white;}
-.btn-primary:hover{background-color:orange;color:black;}
+.btn.btn-raised.btn-secondary{background-color:orange;color:black;}
+.btn.btn-raised.btn-secondary:hover{background-color:green !important;color:white !important;}
+.btn.btn-raised.btn-primary{background-color:green !important;color:white !important;}
+.btn.btn-raised.btn-primary:hover{background-color:orange !important;color:black !important;}
+h3{color: white !important;}
+.col-md-3>h2
+{
+	height: 100px;
+}
+.col-md-3
+{
+	height: 245px;
+}
