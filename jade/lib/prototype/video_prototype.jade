@@ -1,5 +1,5 @@
 block classes
-	- var homeclass = '.active'
+	- var homeclass = undefined
 	- var chatclass = undefined
 	- var contactclass = undefined
 	- var aboutclass = undefined
@@ -7,11 +7,10 @@ block classes
 extends ../../template
 
 block content
-	.jumbotron
-		.container
-			h1.display-3 {{title}}
 	.container
-		.row
-			.col-md-7(style="height: 400px")
+		.panel.panel-primary
+			.panel-heading
+				h4="{{title}}"
+			.panel-body
 				iframe(width='560', height='315', src='{{link}}', frameborder='0', allowfullscreen='')
 				h3 {{label}}

@@ -10,7 +10,7 @@
 		{
 			$value = substr ($value, 9 + strlen ($id) + 7);
 			$decoded = urldecode ($value);
-			$ans = $ans . "<div class=\"col-md-4\"> <h2>{$decoded}</h2> <p><a href=\"/courses/{$id}/videos/{$value}/\" role=\"button\" class=\"btn btn-secondary\">View details »</a></p> </div>";
+			$ans = $ans . "<div class=\"col-md-4\" style=\"background-color: #fff; box-shadow: 0 0 10px #808080; margin: 10px; padding: 1px 10px 1px; border-radius: 25px\"> <h2>{$decoded}</h2> <p><a href=\"/courses/{$id}/videos/{$value}/\" role=\"button\" class=\"btn btn-secondary\">View details »</a></p> </div>";
 		}
 		return $ans;
 	}

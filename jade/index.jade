@@ -7,16 +7,19 @@ block classes
 extends template
 
 block content
-	.jumbotron
+	//.jumbotron
 		.container
 			h1.display-3
-				img(src='/img/acdemy2_logo.png')
+				img(src='/drawing.svg')
 			p This academy can teach you how to be good at computer sciences
 	.container
-		.row
-			.col-md-10
-				h1(style="color: white;")= "Tracks"
+		.panel.panel-primary
+			.panel-heading
+				h4="Tracks"
+			.panel-body
 				<?php include_once ($_SERVER["DOCUMENT_ROOT"] . "/lib/get_tracks.php");	?>
-			.col-md-10
-				h1(style="color: white;")= "Seminars"
+		.panel.panel-primary
+			.panel-heading
+				h4= "Seminars"
+			.panel-body
 				<?php include_once ($_SERVER["DOCUMENT_ROOT"] . "/lib/get_seminars.php");	?>

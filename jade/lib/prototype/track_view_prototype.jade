@@ -1,5 +1,5 @@
 block classes
-	- var homeclass = '.active'
+	- var homeclass = undefined
 	- var chatclass = undefined
 	- var contactclass = undefined
 	- var aboutclass = undefined
@@ -8,19 +8,15 @@ extends ../../template
 
 block styles
 	style(type='text/css').
-		body {
-			/*background-color: #00AD00;*/
-			background-image: url("/128-61.jpg");
-		}
 		footer {
 			color: white;
 		}
 
 
 block content
-	.jumbotron
-		.container
-			h1.display-3 {{title}}
 	.container
-		.row
-			| {{all}}
+		.panel.panel-primary
+			.panel-heading
+				h4="{{title}}"
+			.panel-body
+				{{all}}

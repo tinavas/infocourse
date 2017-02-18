@@ -11,46 +11,57 @@ html(lang='en')
 		meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
 		link(rel='icon', href='/favicon.png')
 		title Student System
-		link(href='/css/jumbotron.css', rel='stylesheet')
+		//link(href='/css/jumbotron.css', rel='stylesheet')
+		link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Roboto:300,400,500,700')
+		link(rel='stylesheet', href='//fonts.googleapis.com/icon?family=Material+Icons')
+		link(rel='stylesheet', href='/css/bootstrap.min.css')
+		link(rel='stylesheet', href='/css/bootstrap-material-design.min.css')
+		link(rel='stylesheet', href='/css/ripples.min.css')
+		link(rel='stylesheet', href='/css/snackbar.min.css')
 		link(rel='stylesheet', href='/css/extension.css')
-		link(rel='stylesheet', href='/node_modules/bootstrap/dist/css/bootstrap.min.css')
-		link(rel='stylesheet', href='/node_modules/bootstrap-material-design/dist/css/bootstrap-material-design.min.css')
-		link(rel='stylesheet', href='/node_modules/bootstrap-material-design/dist/css/ripples.min.css')
-		link(rel='stylesheet', href='/node_modules/snackbar/dist/snackbar.min.css')
-		link(href='/css/extensions.css', rel='stylesheet')
-		script(src='/node_modules/jquery/dist/jquery.min.js')
-		script(src='/node_modules/bootstrap/dist/js/bootstrap.min.js')
-		script(src='/node_modules/bootstrap-material-design/dist/js/material.min.js')
-		script(src='/node_modules/bootstrap-material-design/dist/js/ripples.min.js')
-		script(src='/node_modules/snackbar/dist/snackbar.min.js')
-		script(src='/js/main.js')
 		style(type='text/css').
 			footer {
-				color: white;
+				color: #f2f2f2;
+				bottom: -10px;
+				position: fixed;
+				width: 100%;
+				background-color: rgba(0, 0, 0, 0.4);
+			}
+			.jumbotron {
+				/*background-color:white;*/
+				color: black;
 			}
 			body {
-				background-image: url('/128-61.jpg');
+				background-image: url('/new.jpg');
+				/*background-color: rgba(0, 0, 0, 0.4);*/
 			}
 
 		block styles
 	body
 		block classes
-		nav.navbar.navbar-inverse
+		nav.navbar.navbar-default
 			//default
 			.container-fluid
 				.navbar-header
 					a.navbar-brand(href='/') TechEdu ++
 					ul.nav.navbar-nav
 						li(class=typeof homeclass === "undefined" ? "" : "active")
-							a(href='/') Home
+							a(href=typeof homeclass === "undefined" ? "/" : "#") Home
 						li
 							a(href='/news') News
 						li(class=typeof chatclass === "undefined" ? "" : "active")
 							a(href='https://chat.techedu.cf') Chat
 						li(class=typeof aboutclass === "undefined" ? "" : "active")
-							a(href='/aboutus.php') About
+							a(href=typeof aboutclass === "undefined" ? "/aboutus.php" : "#") About
 		block content
-		hr
 		footer
 			center
 				p Copyrights © Tech Education++ 2016-2017
+		script(src='/js/jquery.min.js')
+		script(src="/js/tether.min.js")
+		script(src='/js/bootstrap.min.js')
+		script(src="/js/material.min.js")
+		script(src="/js/ripples.min.js")
+		script(src="/js/snackbar.min.js")
+		script(src="/js/jquery.nouislider.min.js")
+		script(src='/js/main.js')

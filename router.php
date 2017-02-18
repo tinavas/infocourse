@@ -150,7 +150,7 @@
 		{
 			while ($row = $result->fetch_assoc ())
 			{
-				$all = $all . "<div class=\"col-md-3\" style=\"background-color: #fff; margin: 10px; border-radius: 25px; border: 3px solid orange;/* padding: 1px 10px 1px;*/\"><h2>{$row["ID"]}</h2><p></p><a href=\"{$row ["Link"]}\" role=\"button\" class=\"btn btn-raised active\">View video »</a><a href=\"#\" role=\"button\" class=\"btn btn-raised btn-success\">Do exam »</a></div>";
+				$all = $all . "<div class=\"col-md-3\" style=\"background-color: #fff; box-shadow: 0 0 10px #808080; margin: 10px; padding: 1px 10px 1px; border-radius: 25px\"><h2>{$row["ID"]}</h2><p></p><a href=\"{$row ["Link"]}\" role=\"button\" class=\"btn btn-raised active\">View video »</a><a href=\"#\" role=\"button\" class=\"btn btn-raised btn-success\">Do exam »</a></div>";
 			}
 		}
 		
@@ -179,7 +179,7 @@
 		{
 			while ($row = $result->fetch_assoc ())
 			{
-				$all = $all . "<div class=\"col-md-3\" style=\"background-color: #fff; margin: 10px; border-radius: 25px; border: 3px solid orange;/* padding: 1px 10px 1px;*/\"><h2>{$row["ID"]}</h2><p></p><a href=\"{$row ["Link"]}\" role=\"button\" class=\"btn btn-raised active\">View details »</a><a href=\"#\" role=\"button\" class=\"btn btn-raised btn-success\">Do exam »</a></div>";
+				$all = $all . "<div class=\"col-md-3\" style=\"background-color: #fff; box-shadow: 0 0 10px #808080; margin: 10px; padding: 1px 10px 1px; border-radius: 25px\"><h2>{$row["ID"]}</h2><p></p><a href=\"{$row ["Link"]}\" role=\"button\" class=\"btn btn-raised active\">View details »</a><a href=\"#\" role=\"button\" class=\"btn btn-raised btn-success\">Do exam »</a></div>";
 			}
 		}
 		
