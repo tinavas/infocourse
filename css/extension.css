@@ -14,13 +14,14 @@ a.normal:hover{color:#373a3c;}
 }
 .col-md-4 {
 	width: 31.33333333% !important;
+	border-radius: 10px !important;
 }
 footer {
-	color: #f2f2f2;
-	bottom: -10px;
-	position: fixed;
+	color: gray;
+	bottom: 0px;
+	position: static;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: transparent;
 }
 .jumbotron {
 	/*background-color:white;*/
