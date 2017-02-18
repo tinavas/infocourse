@@ -31,3 +31,6 @@ body {
 	/*background-image: url('/new.jpg');*/
 	/*background-color: rgba(256, 256, 256, 1);*/
 }
+.btn.btn-success, .btn.btn-success:hover, .btn.btn-success:focus  {
+	background-color: #009688 !important;
+}
