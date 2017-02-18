@@ -6,11 +6,27 @@ a.normal:hover{color:#373a3c;}
 .btn.btn-raised.btn-primary{background-color:green !important;color:white !important;}
 .btn.btn-raised.btn-primary:hover{background-color:orange !important;color:black !important;}
 /*h3{color: white !important;}*/
-.col-md-3>h2
-{
+.col-md-3>h2 {
 	height: 100px;
 }
-.col-md-3
-{
+.col-md-3 {
 	height: 245px;
+}
+.col-md-4 {
+	width: 31.33333333% !important;
+}
+footer {
+	color: #f2f2f2;
+	bottom: -10px;
+	position: fixed;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+.jumbotron {
+	/*background-color:white;*/
+	color: black;
+}
+body {
+	/*background-image: url('/new.jpg');*/
+	/*background-color: rgba(256, 256, 256, 1);*/
 }
