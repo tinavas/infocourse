@@ -1,21 +1,4 @@
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-		<meta name="description" content="The core aim of our project is to create online learning management system that combines best practices in organizing training so that it will be interesting, useful and much easier for the students. The most important part of our project is to fertilize future programmers, showing them that it is not as difficult as it sounds. This will happen through brief and extensive online practical competitions taken their levels, with certificates and prizes for the best ones." />
-		<meta name="author" content="Tech Education ++" />
-		<meta name="keywords" content="Learning, Online, System, Presentations, Videos, Exam" />
-		<meta name="distribution" content="web" />
-		<meta name="robots" content="index, nofollow" />
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="icon" href="/favicon.png" />
-		<title>Student System</title>
-
-		<link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
-		<script src="/js/jquery.min.js"></script>
-		<script src="/bootstrap/dist/js/bootstrap.min.js"></script>
-
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="description" content="The core aim of our project is to create online learning management system that combines best practices in organizing training so that it will be interesting, useful and much easier for the students. The most important part of our project is to fertilize future programmers, showing them that it is not as difficult as it sounds. This will happen through brief and extensive online practical competitions taken their levels, with certificates and prizes for the best ones."/><meta name="author" content="Tech Education ++"/><meta name="keywords" content="Learning, Online, System, Presentations, Videos, Exam"/><meta name="distribution" content="web"/><meta name="robots" content="index, follow"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><link rel="icon" href="/favicon.png"/><title>Student System</title><!--link(href='/css/jumbotron.css', rel='stylesheet')--><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700"/><link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons"/><link rel="stylesheet" href="/css/bootstrap.min.css"/><link rel="stylesheet" href="/css/bootstrap-material-design.min.css"/><link rel="stylesheet" href="/css/ripples.min.css"/><link rel="stylesheet" href="/css/snackbar.min.css"/><link rel="stylesheet" href="/css/extension.css"/>
 		<style>
 			.carousel-inner > .item > img,
 			.carousel-inner > .item > a > img {
@@ -49,6 +32,9 @@
 			article>header>summary {
 				font-size: 0.5em;
 			}
+			#myCarousel {
+				background-color: white;
+			} 
 			#myCarousel article>aside {
 				font-size: 1.5em;
 				float: left;
@@ -98,22 +84,7 @@
 	</head>
 
 	<body>
-		 <nav class="navbar navbar-inverse">
-			<div class="container-fluid">
-				<div class="navbar-header">
-
-					<a class="navbar-brand" href="/">TechEdu ++</a>
-					<ul class="nav navbar-nav">
-						<li><a href="/">Home</a></li>
-						<li class="active"><a href="#">News</a></li>
-						<li><a href="https://chat.techedu.cf/">Chat</a></li>
-						<li><a href="/aboutus.php">About</a></li>
-					</ul>
-				</div>
-
-			 </div>
-
-		 </nav>
+		<nav class="navbar navbar-default"><!--default--><div class="container-fluid"><div class="navbar-header"><a href="/" class="navbar-brand">TechEdu ++</a><ul class="nav navbar-nav"><li><a href="/">Home</a></li><li class="active"><a href="#">News</a></li><li><a href="https://chat.techedu.cf">Chat</a></li><li><a href="/aboutus.php">About</a></li></ul></div></div></nav>
 		<span id="page" style="display: none;">{{page}}</span>
 		<div id="top" style="display: none;">
 			{{top}}
@@ -122,17 +93,16 @@
 			{{id}}
 		</div>
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
-			<!-- Indicators -->
 			<ol class="carousel-indicators">
 			</ol>
 			<div class="carousel-inner" role="listbox">
 			</div>
 			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="icon-prev" aria-hidden="true"></span>
 				<span class="sr-only">Previous</span>
 			</a>
 			<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="icon-next" aria-hidden="true"></span>
 				<span class="sr-only">Next</span>
 			</a>
 		</div>
@@ -147,6 +117,7 @@
 		</div>
 		<hr>
 		<footer><center><p>Copyrights © Tech Education++ 2016-2017</p></center></footer>
+		<script src="/js/jquery.min.js"></script><script src="/js/tether.min.js"></script><script src="/js/bootstrap.min.js"></script><script src="/js/material.min.js"></script><script src="/js/ripples.min.js"></script><script src="/js/snackbar.min.js"></script><script src="/js/jquery.nouislider.min.js"></script><script src="/js/main.js"></script>
 		<script>
 			let slides = $(".carousel-inner")[0];
 			let all = $("#all");
