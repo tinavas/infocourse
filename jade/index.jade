@@ -7,13 +7,14 @@ block classes
 extends template
 
 block content
-	//.jumbotron
+	.jumbotron(style="height: 100%; width: 100%; background-image: url('/maia.png');")
 		.container
-			h1.display-3
-				img(src='/drawing.svg')
-			p This academy can teach you how to be good at computer sciences
+			center
+				h1.display-3
+					img(style="background-color: white;", src='/img/acdemy3_logo.png')
+				p This academy can teach you how to be good at computer sciences
 	.container
-		.jumbotron
+		//.jumbotron
 			center
 				img.img-responsive(src='/img/acdemy3_logo.png')
 		.panel.panel-primary
