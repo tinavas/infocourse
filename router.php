@@ -31,11 +31,12 @@
     else if (preg_match ("/\/news.{1,}/", $_SERVER['REQUEST_URI']) != 0)
 	{
 		file_put_contents("php://stdout", "\nRequested: Router: News: " . $_SERVER['REQUEST_URI'] . "\n");
-		$id = parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY);
-		if (!isset ($id))
+		$id = $_SERVER['REQUEST_URI'];
+		if ($id == "/news/")
 			$id = "1";
 		else
-			$id = substr ($id, 5);
+			$id = substr ($id, 6);
+		file_put_contents("php://stdout", "\nRequested: Router: News: " . $id . "\n");
 		$joke = rand () % $jokes + 1;
 
 		file_put_contents("php://stdout", "\nRequested: Router: Joke: " . $joke . "\n");

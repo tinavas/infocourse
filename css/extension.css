@@ -16,6 +16,9 @@ a.normal:hover{color:#373a3c;}
 	width: 31.33333333% !important;
 	border-radius: 5px !important;
 }
+.col-md-4 h2 {
+	font-weight: bold;
+}
 footer {
 	color: gray;
 	bottom: 0px;
