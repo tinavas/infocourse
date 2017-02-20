@@ -1,0 +1,113 @@
+tabe drop.sql
+w my_index.html
+tabe doc/site//js//main.js
+!ls
+tabe my_index.html
+!find . -name ext-lang\*
+!ls ../../have_repo/
+!find . -name theme\*
+map <F2> i<End>"<Esc>j
+map <F2> i<End>",<Esc>j
+map <F3> <End>hhhhxxxj
+w constexpr_1.cpp
+e constexpr_1.cpp
+e 1.cpp
+Pw
+%s/int/long long/g
+noh
+"W
+%s/long long/int/g
+tabe 2.c.cpp
+s
+tabe news/all.php
+%
+tabe aboutus.php
+tabe ../../template.jade
+tabe bootstrap/dist//css//bootstrap.min.css
+tabe css/jumbotron.css
+we
+tabe ../router.php
+tabe jade/index.jade
+tabe lib/prototype/track_view_prototype.jade
+!ls node_modules/bootstrap//dist//css//bootstrap.min.css
+!ls node_modules/bootstrap//dist//js/bootstrap.min.js
+!ls node_modules/
+!ls node_modules/jquery/dist//jquery.min.js
+!ls node_modules/bootstrap-material-design//dist//css//bootstrap-material-design.min.css
+!ls node_modules/bootstrap-material-design//dist//js/material.min.js
+!ls ../bootstrap/dist/css//bootstrap-theme.css
+tabe ../js/md5.min.js
+tabe ../js/main.js
+wa
+!find ../node_modules/ -name rip\*
+!find ../node_modules/ -name snack\*
+!find ../node_modules/ -name sna\*
+!find ../node_modules/ -name jquer\*
+!find ../node_modules/ -name jquery.nouislider.min.js\*
+tabe css/extension.css
+map <F2> J<<
+!./valentinesday.exe
+2
+tabe valentinesday.cpp
+ccl
+!./heart.exe
+!./a.exe
+tabe b.cpp
+%s/uint64_t/int/g
+%s/int/uint64_t/g
+%s/secondary/default/g
+tabe contactus.fot
+tabe contactus.jade
+tabe admin_panel.jade
+!ls ../js/
+!ls ../node_modules//ripples//index.js
+!ls ../node_modules//bootstrap-material-design//dist//js//ripples.js
+!ls ../node_modules//bootstrap-material-design//dist//js//ripples.min.js
+q!
+uu
+!cp ~/Downloads/new.jpg .
+Qa
+qq
+!ls ../css
+!ls ../js
+tabe template.jade
+tabe get_videos.php
+tabe ../../index.jade
+tabe video_prototype.jade
+tabe ../css/extension.css
+w karea.cpp
+w mars.cpp
+tabe mars.cpp
+%s/karea/mars/g
+w rabbit.cpp
+tabe rabbit.cpp
+%s/mars/rabbits/g
+w product.cpp
+tabe product.cpp
+%s/rabbits/product/g
+%s/karea/collision/g
+%s/int/double/g
+w hub.cpp
+tabe hub.cpp
+%s/collision/hub/g
+%s/Python/C++/g
+tabe init.sql
+tabe index.php
+#
+w /tmp/a
+!cat '%' | gpaste-client
+tabe ../../infocourse/jade/template.jade
+%s/-lg/-raised/g
+tabe lib/contest.php
+tabe .htrouter.php
+Q
+qa
+tabe index.fot
+tabe index.jade
+wqa
+W
+Wq
+q
+wq
+w
+
