@@ -8,23 +8,28 @@
     <meta name="author" content="Tech Education ++">
     <meta name="keywords" content="Learning, Online, System, Presentations, Videos, Exam">
     <meta name="distribution" content="web">
-    <meta name="robots" content="index, nofollow">
+    <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="icon" href="/favicon.png">
     <title>Student System</title>
-    <link href="/css/jumbotron.css" rel="stylesheet">
-    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+    <!--link(href='/css/jumbotron.css', rel='stylesheet')-->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="/css/ripples.min.css">
+    <link rel="stylesheet" href="/css/snackbar.min.css">
     <link rel="stylesheet" href="/css/extension.css">
-    <script src="/js/jquery.min.js"></script>
-    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+    <style type="text/css"></style>
 </head>
 
-<body>
+<body cz-shortcut-listen="true">
     <nav class="navbar navbar-default">
+        <!--default-->
         <div class="container-fluid">
             <div class="navbar-header"><a href="/" class="navbar-brand">TechEdu ++</a>
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="/news">News</a></li>
                     <li><a href="https://chat.techedu.cf">Chat</a></li>
                     <li><a href="/aboutus.php">About</a></li>
@@ -32,25 +37,20 @@
             </div>
         </div>
     </nav>
-    <div class="jumbotron">
-        <div class="container">
-            <h1 class="display-3">Preparing...</h1>
-            <p>This academy can teach you how to be good at computer sciences</p>
-        </div>
-    </div>
     <div class="container">
-        <div class="row">
-            <div style="height: 400px" class="col-md-7">
-                <iframe src="https://www.youtube.com/embed/heXKR7KDt-c" allowfullscreen="" height="315" frameborder="0" width="560"></iframe>
-				<h3>Author: Yasen Georgiev (<a href="http://yasen.me">yasen.me</a>)</h3>
-			</div>
-		</div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4>Preparing...</h4></div>
+            <div class="panel-body">
+                <iframe src="https://www.youtube.com/embed/heXKR7KDt-c" allowfullscreen="" width="560" height="315" frameborder="0"></iframe>
+                <h3>Author: Yasen Georgiev (<a href="http://yasen.me">yasen.me</a>)</h3></div>
+        </div>
 		<hr>
-		<div class="row">
-			<h2 id="commentsText" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" unselectable="on" onselectstart="return false;" onmousedown="return false;">Comments: <span class="label label-default" style="padding: 10px 5px 5px">{{number}}</span></h2></a>
-		</div>
-		<div class="row" id="comments">
-<!--			<div class="col-md-4">-->
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+				<h4 id="commentsText" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" unselectable="on" onselectstart="return false;" onmousedown="return false;">Comments: <span class="badge">123</span></h4>
+			</div>
+            <div class="panel-body">
 				<form method="post" onsubmit="return false;" class="form-group">
 					Name: <input id="name" name="name" type="text" class="form-control" value="{{name}}" readonly>
 					Comment: <textarea id="comment" name="comment" class="form-control"></textarea>
@@ -59,6 +59,7 @@
 				</form>
 				<div id="comments_container">
 				</div>
+			</div>
 		</div>
     </div>
     <hr>
@@ -67,6 +68,14 @@
             <p>Copyrights © Tech Education++ 2016-2017</p>
         </center>
 	</footer>
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/tether.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/material.min.js"></script>
+	<script src="/js/ripples.min.js"></script>
+	<script src="/js/snackbar.min.js"></script>
+	<script src="/js/jquery.nouislider.min.js"></script>
+	<script src="/js/main.js"></script>
 	<script>
 		$("#comments").hide ();
 		$("#commentsText").click (function ()

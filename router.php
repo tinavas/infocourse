@@ -117,14 +117,20 @@
 			file_put_contents("php://stdout", "\nRequested: Router: Lable: " . $row["Label"] . "\n");
 			echo 
 				str_replace (
-					"{{params}}", $URI,  
+					"{{number}}", $conn->query("SELECT * FROM `Comments` WHERE `LINK`=\"" . $URI . "\"")->num_rows,  
 					str_replace (
-						"{{label}}", $row["Label"],  
+						"{{name}}", $_COOKIE["name"],  
 						str_replace (
-							"{{title}}", $row["ID"],  
+							"{{params}}", $URI,  
 							str_replace (
-								"{{link}}", $row["Source"], 
-								$file
+								"{{label}}", $row["Label"],  
+								str_replace (
+									"{{title}}", $row["ID"],  
+									str_replace (
+										"{{link}}", $row["Source"], 
+										$file
+									)
+								)
 							)
 						)
 					)

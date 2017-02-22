@@ -14,3 +14,67 @@ block content
 			.panel-body
 				iframe(width='560', height='315', src='{{link}}', frameborder='0', allowfullscreen='')
 				h3 {{label}}
+		.panel.panel-primary
+			.panel-heading
+				h4#commentsText(style='-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;', unselectable='on', onselectstart='return false;', onmousedown='return false;')
+					| Comments: 
+					span#number.badge {{number}}
+			.panel-body
+				form.form-group(method='post', onsubmit='return false;')
+					| Name: 
+					input#name.form-control(name='name', type='text', value='{{name}}', readonly='')
+					| Comment: 
+					textarea#comment.form-control(name='comment')
+					input.form-control(name='video', type='hidden', value='{{params}}')
+					button#publish.btn.btn-primary Publish
+				#comments_container(style="width: 100%")
+
+block js
+	script.
+		$("#comments").hide ();
+		$("#commentsText").click (function ()
+		{
+			if ($("#commentsText").attr ("class") == "showed")
+			{
+				$("#commentsText").attr ("class", "my_hidden");
+				$("#comments").hide (250);
+			}
+			else
+			{
+				$("#commentsText").attr ("class", "showed");
+				$("#comments").show (250);
+			}
+		});
+		$.ajax({
+			method: "POST",
+			url: "/post_comment.php",
+			data: { type: "get", link: "{{params}}" }
+		})
+		.done(function (all_posts) {
+			//alert (all_posts);
+			let all = JSON.parse (all_posts);
+			$("#comments_container").html ("");
+			for (let x in all)
+			{
+				$("#comments_container").html ($("#comments_container").html () + "<div id=" + x + "><h4><b>" + all [x].author + " <small style='float: right;'><time>" + all[x].time + " </time></small></b></h4><p>" + all[x].text + "</p></div><hr>");
+			}
+		});
+		$("#publish").click (function ()
+		{
+			$.ajax({
+			method: "POST",
+			url: "/post_comment.php",
+			data: { type: "post", author: $("#name").val (), text: $("#comment").val (), link: "{{params}}" }
+		})
+		.done(function (all_posts) {
+			//alert("Data Saved: " + all_posts);
+			let all = JSON.parse (all_posts);
+			$("#comments_container").html ("");
+			for (let x in all)
+			{
+				$("#comments_container").html ($("#comments_container").html () + "<div id=" + x + "><h4><b>" + all [x].author + " <small style='float: right'><time>" + all[x].time + " </time></small></b></h4><p>" + all[x].text + "</p></div><hr>");
+			}
+			$("#number").html (parseInt ($("#number").html ()) + 1);
+		});
+		$("#comment").val("");
+		});

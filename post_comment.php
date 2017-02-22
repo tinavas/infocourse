@@ -6,7 +6,7 @@
 
 	$conn = new MySQL ($dbname);
 	
-	$uri = addslashes($_REQUEST ['link']);
+	$uri = addslashes($_REQUEST['link']);
 
 	if (
 		isset ($_REQUEST ['author']) &&
@@ -15,8 +15,8 @@
 	{
 		file_put_contents("php://stdout", "\nRequested: POST: " . $_SERVER['REQUEST_URI'] . "\n");
 		$author = addslashes($_REQUEST ['author']);
-		$text = addslashes(strip_tags ($_REQUEST ['text'], "<i><b><u><br><p><ul><li>"));
-		$time = date('Y-m-d, h:i:sa');
+		$text = addslashes(strip_tags (trim(preg_replace("/\"/", "&#34;", preg_replace('/\'/', '&#39;', preg_replace('/\r\n|\r|\n/', '<br>', $_REQUEST ['text'])))), "<i><b><u><br><p><ul><li><code>"));
+		$time = date('d M Y,   H:i');
 		$code = addslashes(md5 ($author . $text . $uri));
 
 		$conn->query ("INSERT INTO `Comments` (`ID`, `Author`, `Text`, `Link`, `Time`) VALUES ('{$code}','{$author}','{$text}','{$uri}','{$time}')");
@@ -37,8 +37,9 @@
 			$ans = $ans . "\"{$id}\": {\"author\": \"{$row ["Author"]}\", \"text\": \"{$row ["Text"]}\", \"time\": \"{$row ["Time"]}\"},";
 			$id = $id + 1;
 		}
+		$ans = substr ($ans, 0, -1);
 	}
-	$ans = substr ($ans, 0, -1) . "}";
+	$ans = $ans . "}";
 	file_put_contents("php://stdout", "\nRequested: GET all: " . $ans . "\n");
 	echo $ans;
 ?>
