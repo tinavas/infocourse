@@ -61,6 +61,11 @@ block js
 		});
 		$("#publish").click (function ()
 		{
+			if ($.cookie("name") === "" || $.cookie("test") === undefined)
+			{
+				$.cookie("name", prompt("What is your name?"), { expires : 10, path: '/' })
+				$("#name").val ($.cookie("name"));
+			}
 			$.ajax({
 			method: "POST",
 			url: "/post_comment.php",
