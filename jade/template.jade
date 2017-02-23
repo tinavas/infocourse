@@ -24,7 +24,7 @@ html(lang='en')
 		block styles
 	body
 		block classes
-		nav.navbar.navbar-default
+		nav.navbar.navbar-fixed-top.navbar-default
 			//default
 			.container-fluid
 				.navbar-header
@@ -38,6 +38,7 @@ html(lang='en')
 							a(href='https://chat.techedu.cf') Chat
 						li(class=typeof aboutclass === "undefined" ? "" : "active")
 							a(href=typeof aboutclass === "undefined" ? "/aboutus.php" : "#") About
+		div(style="height:50px;")
 		block content
 		footer
 			center
