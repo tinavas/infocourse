@@ -19,7 +19,7 @@ a.normal:hover{color:#373a3c;}
 	font-weight: bold;
 }
 footer {
-	color: gray;
+	color: gray !important;
 	bottom: 0px;
 	position: static;
 	width: 100%;
