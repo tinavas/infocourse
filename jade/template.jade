@@ -19,6 +19,21 @@ html(lang='en')
 		link(rel='stylesheet', href='/css/ripples.min.css')
 		link(rel='stylesheet', href='/css/snackbar.min.css')
 		link(rel='stylesheet', href='/css/extension.css')
+		meta(property='og:url', content='https://infocourse.techedu.cf/')
+		meta(property='og:type', content='website')
+		meta(property='og:title', content='Your Website Title')
+		meta(property='og:description', content='Your description')
+		meta(property='og:image', content='https://infocourse.techedu.cf/img/acdemy4_logo.png')
+
+		#fb-root
+		script.
+			(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+			fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
 		style(type='text/css').
 
 		block styles
