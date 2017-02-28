@@ -34,17 +34,6 @@ CREATE TABLE `Comments` (
   `Time` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `Comments`
---
-
-INSERT INTO `Comments` (`ID`, `Author`, `Text`, `Link`, `Time`) VALUES
-('869faae16096e225becd2ce4c378b990', 'Dimo Chanev', 'asdf', '/courses/PHP/videos/0', '22 Feb 2017,   20:58'),
-('2a7e13fd33fea9927130e16e39046400', 'Dimo Chanev', 'asd', '/courses/PHP/videos/0', '22 Feb 2017,   21:03'),
-('24c5ba9dfb88f4f216fc190a1d660754', 'Dimo Chanev', 'asd<br>sdv', '/courses/PHP/videos/0', '22 Feb 2017,   21:05'),
-('ddbe50d0fd5ddf3fa57e15fe120fd97a', 'Dimo Chanev', 'sad', '/courses/PHP/videos/1', '22 Feb 2017,   21:06'),
-('c126533f46e8c86e7402b3dcefe893cc', 'Alex Tsvetanov', 'asd', '/courses/PHP/videos/0', '23 Feb 2017,   07:41');
-
 -- --------------------------------------------------------
 
 --
