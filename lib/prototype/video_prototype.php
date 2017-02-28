@@ -28,10 +28,11 @@ $.ajax({
 });
 $("#publish").click (function ()
 {
-	if ($.cookie("name") === "" || $.cookie("test") === undefined)
+	if ($("#name").val() === "" || $("#name").val() === undefined)
 	{
-		$.cookie("name", prompt("What is your name?"), { expires : 10, path: '/' })
-		$("#name").val ($.cookie("name"));
+		let name = prompt("What is your name?");
+		$.cookie("name", name, { expires : 1, path: '/' });
+		$("#name").val (name);
 	}
 	$.ajax({
 	method: "POST",
