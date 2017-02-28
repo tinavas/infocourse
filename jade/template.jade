@@ -38,6 +38,10 @@ html(lang='en')
 							a(href='https://chat.techedu.cf') Chat
 						li(class=typeof aboutclass === "undefined" ? "" : "active")
 							a(href=typeof aboutclass === "undefined" ? "/aboutus.php" : "#") About
+					ul.nav.navbar-nav.navbar-right
+						li.nav-item
+							a.nav-link(href="/logout.php") Logout
+						li.nav-item(class=typeof homeclass === "undefined" ? "" : "active", style="border-right: rgba(0,0,0,0) solid 20px;")
 		block content
 		footer
 			center

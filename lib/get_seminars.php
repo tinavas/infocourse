@@ -12,7 +12,12 @@
 	{
 		while($row = $result->fetch_assoc()) 
 		{
-			echo "<div class=\"col-md-4\" style=\"background-color: #fff; box-shadow: 0 0 10px #808080; margin: 10px; padding: 1px 10px 1px; border-radius: 25px;\"> <h2>{$row["Name"]}</h2><a href=\"{$row["Link"]}\" role=\"button\" class=\"btn btn-raised active\">View video »</a> <a href=\"{$row["ExamLink"]}\" role=\"button\" class=\"btn btn-raised btn-success\">Do exam »</a> </div>";
+			echo "<div class=\"col-md-4\" style=\"background-color: #fff; box-shadow: 0 0 10px #808080; margin: 10px; padding: 1px 10px 1px; border-radius: 25px;\">";
+			echo "<h2>{$row["Name"]}</h2>";
+			echo "<a href=\"{$row["Link"]}\" role=\"button\" class=\"btn btn-raised active\">View video »</a>";
+			if ($row["ExamLink"] != "#")
+				echo "<a href=\"{$row["ExamLink"]}\" role=\"button\" class=\"btn btn-raised btn-success\">Do exam »</a>";
+			echo "</div>";
 		}
 	}
 ?>

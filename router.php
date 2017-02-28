@@ -81,14 +81,20 @@
 			$file = file_get_contents('./lib/prototype/video_prototype.php', FILE_USE_INCLUDE_PATH);
 			echo 
 				str_replace (
-					"{{params}}", $URI,
+					"{{number}}", $conn->query("SELECT * FROM `Comments` WHERE `LINK`=\"" . $URI . "\"")->num_rows,  
 					str_replace (
-						"{{label}}", $row["Label"],  
+						"{{name}}", $_COOKIE["name"],  
 						str_replace (
-							"{{title}}", $row["Name"],  
+							"{{params}}", $URI,
 							str_replace (
-								"{{link}}", $row["Source"], 
-								$file
+								"{{label}}", $row["Label"],  
+								str_replace (
+									"{{title}}", $row["Name"],  
+									str_replace (
+										"{{link}}", $row["Source"], 
+										$file
+									)
+								)
 							)
 						)
 					)
@@ -157,7 +163,12 @@
 		{
 			while ($row = $result->fetch_assoc ())
 			{
-				$all = $all . "<div class=\"col-md-4\" style=\"background-color: #fff; box-shadow: 0 0 10px #808080; margin: 10px; padding: 1px 10px 1px; border-radius: 25px\"><h2>{$row["ID"]}</h2><p></p><a href=\"{$row ["Link"]}\" role=\"button\" class=\"btn btn-raised active\">View video »</a><a href=\"{$row["ExamLink"]}\" role=\"button\" class=\"btn btn-raised btn-success\">Do exam »</a></div>";
+				$all = $all . "<div class=\"col-md-4\" style=\"background-color: #fff; box-shadow: 0 0 10px #808080; margin: 10px; padding: 1px 10px 1px; border-radius: 25px;\">";
+				$all = $all . "<h2>{$row["ID"]}</h2>";
+				$all = $all . "<a href=\"{$row["Link"]}\" role=\"button\" class=\"btn btn-raised active\">View video »</a>";
+				if ($row["ExamLink"] != "#")
+					$all = $all . "<a href=\"{$row["ExamLink"]}\" role=\"button\" class=\"btn btn-raised btn-success\">Do exam »</a>";
+				$all = $all . "</div>";
 			}
 		}
 		
@@ -186,7 +197,12 @@
 		{
 			while ($row = $result->fetch_assoc ())
 			{
-				$all = $all . "<div class=\"col-md-4\" style=\"background-color: #fff; box-shadow: 0 0 10px #808080; margin: 10px; padding: 1px 10px 1px; border-radius: 25px\"><h2>{$row["ID"]}</h2><p></p><a href=\"{$row ["Link"]}\" role=\"button\" class=\"btn btn-raised active\">View details »</a><a href=\"{$row["ExamLink"]}\" role=\"button\" class=\"btn btn-raised btn-success\">Do exam »</a></div>";
+				$all = $all . "<div class=\"col-md-4\" style=\"background-color: #fff; box-shadow: 0 0 10px #808080; margin: 10px; padding: 1px 10px 1px; border-radius: 25px;\">";
+				$all = $all . "<h2>{$row["ID"]}</h2>";
+				$all = $all . "<a href=\"{$row["Link"]}\" role=\"button\" class=\"btn btn-raised active\">View video »</a>";
+				if ($row["ExamLink"] != "#")
+					$all = $all . "<a href=\"{$row["ExamLink"]}\" role=\"button\" class=\"btn btn-raised btn-success\">Do exam »</a>";
+				$all = $all . "</div>";
 			}
 		}
 		

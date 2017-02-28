@@ -72,19 +72,6 @@ INSERT INTO `Courses` (`ID`, `Track`, `Link`, `Label`, `ExamLink`) VALUES
 ('Graphs', 'Algorithms', '/courses/Graphs', '', '#');
 
 -- --------------------------------------------------------
-
---
--- Table structure for table `Exams`
---
-
-CREATE TABLE `Exams` (
-  `ID` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Course` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Link` text COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
 --
 -- Table structure for table `Seminars`
 --
@@ -114,17 +101,18 @@ INSERT INTO `Seminars` (`ID`, `Name`, `Link`, `Source`, `Label`, `ExamLink`) VAL
 CREATE TABLE `Tracks` (
   `ID` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `Name` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Folder` text COLLATE utf8mb4_unicode_ci NOT NULL
+  `Folder` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ExamLink` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `Tracks`
 --
 
-INSERT INTO `Tracks` (`ID`, `Name`, `Folder`) VALUES
-('2', 'PHP', '/tracks/PHP'),
-('0', 'C++', '/tracks/C++'),
-('0', 'Algorithms', '/tracks/Algorithms');
+INSERT INTO `Tracks` (`ID`, `Name`, `Folder`, `ExamLink`) VALUES
+('2', 'PHP', '/tracks/PHP', '#'),
+('0', 'C++', '/tracks/C++', '#'),
+('0', 'Algorithms', '/tracks/Algorithms', '#');
 
 -- --------------------------------------------------------
 
@@ -179,10 +167,10 @@ INSERT INTO `Videos` (`ID`, `Course`, `Link`, `Source`, `Label`, `ExamLink`) VAL
 ('I/O Stream', 'C++1', '/courses/C++/videos/IO%20Stream', 'https://www.youtube.com/embed/phM0lHrmVnE', 'Alex Tsvetanov', 'https://judge.techedu.cf/contests/1'),
 ('if-else', 'C++1', '/courses/C++/videos/if-else', 'https://www.youtube.com/embed/sPV2_eJtgmk', 'Evgeni Vasilev', '#'),
 ('switch-case', 'C++1', '/courses/C++/videos/switch', 'https://www.youtube.com/embed/yBxR6FZKl4E', 'Evgeni Vasilev', '#'),
-('while loop', 'C++1', '/courses/C++/videos/switch', 'https://www.youtube.com/embed/LFENULP3qeg', 'Evgeni Vasilev', '#'),
-('do-while loop', 'C++1', '/courses/C++/videos/switch', 'https://www.youtube.com/embed/ji6xvgGmiKc', 'Evgeni Vasilev', '#'),
-('for loop', 'C++1', '/courses/C++/videos/switch', 'https://www.youtube.com/embed/QQtZD08-15g', 'Evgeni Vasilev', '#'),
-('break, continue', 'C++1', '/courses/C++/videos/switch', 'https://www.youtube.com/embed/FaISNM23cW0', 'Evgeni Vasilev', '#'),
+('while loop', 'C++1', '/courses/C++/videos/while', 'https://www.youtube.com/embed/LFENULP3qeg', 'Evgeni Vasilev', '#'),
+('do-while loop', 'C++1', '/courses/C++/videos/do-while', 'https://www.youtube.com/embed/ji6xvgGmiKc', 'Evgeni Vasilev', '#'),
+('for loop', 'C++1', '/courses/C++/videos/for', 'https://www.youtube.com/embed/QQtZD08-15g', 'Evgeni Vasilev', '#'),
+('break, continue', 'C++1', '/courses/C++/videos/break_continue', 'https://www.youtube.com/embed/FaISNM23cW0', 'Evgeni Vasilev', '#'),
 ('Sort function', 'C++2', '/courses/C++/videos/sort_func', 'https://www.youtube.com/embed/okiF-XsrSWY', 'Marin Shalamanov', '#'),
 ('Binary search function', 'C++2', '/courses/C++/videos/binary_search_function', 'https://www.youtube.com/embed/slk-hXnrXF0', 'Marin Shalamanov', '#'),
 ('lower/upper bound', 'C++2', '/courses/C++/videos/bound_functions', 'https://www.youtube.com/embed/NJJ3CEKHySU', 'Marin Shalamanov', '#'),
