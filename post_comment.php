@@ -16,11 +16,18 @@
 	{
 		file_put_contents("php://stdout", "\nRequested: POST: " . $_SERVER['REQUEST_URI'] . "\n");
 		$author = addslashes($_REQUEST ['author']);
-		$text = addslashes(strip_tags (trim(preg_replace("/\"/", "&#34;", preg_replace('/\'/', '&#39;', preg_replace('/\r\n|\r|\n/', '<br>', $_REQUEST ['text'])))), "<i><b><u><br><p><ul><li><code>"));
-		$time = date('d M Y,   H:i');
-		$code = addslashes(md5 ($author . $text . $uri));
+		if ($author == '' || ctype_space($author))
+		{
+			//cheating
+		}
+		else
+		{
+			$text = addslashes(strip_tags (trim(preg_replace("/\"/", "&#34;", preg_replace('/\'/', '&#39;', preg_replace('/\r\n|\r|\n/', '<br>', $_REQUEST ['text'])))), "<i><b><u><br><p><ul><li><code>"));
+			$time = date('d M Y,   H:i');
+			$code = addslashes(md5 ($author . $text . $uri));
 
-		$conn->query ("INSERT INTO `Comments` (`ID`, `Author`, `Text`, `Link`, `Time`) VALUES ('{$code}','{$author}','{$text}','{$uri}','{$time}')");
+			$conn->query ("INSERT INTO `Comments` (`ID`, `Author`, `Text`, `Link`, `Time`) VALUES ('{$code}','{$author}','{$text}','{$uri}','{$time}')");
+		}
 	}
 	
 	file_put_contents("php://stdout", "\nRequested: GET all: " . $_SERVER['REQUEST_URI'] . "\n");
