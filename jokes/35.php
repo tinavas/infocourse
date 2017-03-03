@@ -1,2 +1,2 @@
 
-<img class="img-responsive" src="/jokes/img/joke--meme_boolean-logic.jpg" />
+<img class="img-responsive" src="/jokes/img/joke-sql.jpg" />

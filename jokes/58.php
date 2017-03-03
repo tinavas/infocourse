@@ -1,4 +1,5 @@
 
 
-<h2>There are three kinds of lies: Lies, damned lies, and benchmarks.</h2>
+Eight bytes walk into a bar.  The bartender asks, “Can I get you anything?”
+“Yeah,” reply the bytes.  “Make us a double.”
 

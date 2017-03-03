@@ -1,4 +1,4 @@
 
 
-<h2>“I just saw my life flash before my eyes and all I could see was a close tag…”</h2>
+A programmer walks to the butcher shop and buys a kilo of meat.  An hour later he comes back upset that the butcher shortchanged him by 24 grams.
 

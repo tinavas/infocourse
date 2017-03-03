@@ -1,5 +1,2 @@
 
-
-<h2>Q. How did the programmer die in the shower?</h2>
-<h2>A. He read the shampoo bottle instructions: Lather. Rinse. Repeat.</h2>
-
+<img class="img-responsive" src="/jokes/img/joke--meme_ifthen.jpg" />

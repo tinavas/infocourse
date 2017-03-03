@@ -1,3 +1,2 @@
 
-<h2>When I wrote this code only I and God know what it did. Now God only knows.</h2>
-
+<img class="img-responsive" src="/jokes/img/joke--meme_new-method.jpg" />

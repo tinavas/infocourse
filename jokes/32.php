@@ -1,2 +1,2 @@
 
-<img class="img-responsive" src="/jokes/img/joke-life-motto.jpg" />
+<img class="img-responsive" src="/jokes/img/joke-no-sql.jpg" />

@@ -1,5 +1,5 @@
 
 
-<h2>A man is smoking a cigarette and blowing smoke rings into the air.  His girlfriend becomes irritated with the smoke and says, “Can’t you see the warning on the cigarette pack?  Smoking is hazardous to your health!” </h2>
-<h2>To which the man replies, “I am a programmer.  We don’t worry about warnings; we only worry about errors.”</h2<
+Two bytes meet.  The first byte asks, “Are you ill?”
+The second byte replies, “No, just feeling a bit off.”
 

@@ -1,2 +1,2 @@
 
-<img class="img-responsive" src="/jokes/img/joke--comic_life-of-programmer.jpg" />
+<img class="img-responsive" src="/jokes/img/joke-source-code.jpg" />

@@ -1,4 +1,2 @@
 
-
-<h2>There are only 10 kinds of people in this world: those who know binary and those who don’t.</h2>
-
+<img class="img-responsive" src="/jokes/img/joke--comic_sleep-cycle.jpg" />

@@ -1,4 +1,7 @@
 
 
-<h2>The computer is mightier than the pen, the sword, and usually, the programmer.</h2>
+"Knock, knock."
+"Who's there?"
+very long pause...
+"Java."
 

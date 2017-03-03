@@ -1,2 +1,2 @@
 
-<img class="img-responsive" src="/jokes/img/joke-unix-friendly.jpg" />
+<img class="img-responsive" src="/jokes/img/joke-blue-screen.jpg" />

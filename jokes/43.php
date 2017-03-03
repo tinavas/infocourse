@@ -1,2 +1,2 @@
 
-<img class="img-responsive" src="/jokes/img/joke--comic_sleep-pos.jpg" />
+<img class="img-responsive" src="/jokes/img/joke-hip.jpg" />

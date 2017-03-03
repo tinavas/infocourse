@@ -107,11 +107,11 @@
 			</a>
 		</div>
 		<div id="all"> </div>
+		<hr>
 		<div class="container">
-			<div id="row" class="row">
+			<div class="row">
 				<div id="joke" class="col-md-10">
-					<h1>Joke:</h1><br>
-					{{joke}}
+					<h2>{{joke}}</h2>
 				</div>
 			</div>
 		</div>

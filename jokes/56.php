@@ -1,5 +1,3 @@
 
-
-<h2>Programming is like sex:</h2>
-<h2>One mistake and you have to support it for the rest of your life.</h2>
+When I wrote this code only I and God know what it did. Now God only knows.
 

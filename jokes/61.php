@@ -1,4 +1,5 @@
 
 
-<h2>Have you heard about the new Cray super computer?  It’s so fast, it executes an infinite loop in 6 seconds.</h2>
+Why do programmers always mix up Halloween and Christmas?
+Because Oct 31 equals Dec 25.
 

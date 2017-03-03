@@ -1,2 +1,2 @@
 
-<img class="img-responsive" src="/jokes/img/joke-developer-problems.jpg" />
+<img class="img-responsive" src="/jokes/img/joke-job-arrays.jpg" />

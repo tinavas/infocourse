@@ -1,4 +1,4 @@
 
 
-<h2>The generation of random numbers is too important to be left to chance.</h2>
+There are only 10 kinds of people in this world: those who know binary and those who don’t.
 
