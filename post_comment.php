@@ -7,6 +7,7 @@
 	$conn = new MySQL ($dbname);
 	
 	$uri = addslashes($_REQUEST['link']);
+	$last_number = $_REQUEST['got'];
 
 	if (
 		isset ($_REQUEST ['author']) &&
@@ -24,7 +25,7 @@
 	
 	file_put_contents("php://stdout", "\nRequested: GET all: " . $_SERVER['REQUEST_URI'] . "\n");
 
-	$sql = "SELECT * FROM `Comments` WHERE `Link`='" . $uri . "'";
+	$sql = "SELECT * FROM `Comments` WHERE `Link`='" . $uri . "' LIMIT {$last_number},18446744073709551615";
 	$result = $conn->query($sql);
 
 	$ans = "{";

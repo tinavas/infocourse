@@ -31,56 +31,63 @@ block content
 
 block js
 	script.
-		$("#comments").hide ();
-		$("#commentsText").click (function ()
-		{
-			if ($("#commentsText").attr ("class") == "showed")
-			{
-				$("#commentsText").attr ("class", "my_hidden");
-				$("#comments").hide (250);
-			}
-			else
-			{
-				$("#commentsText").attr ("class", "showed");
-				$("#comments").show (250);
+		$("#comments").hide();
+		$("#commentsText").click(function() {
+			if ($("#commentsText").attr("class") == "showed") {
+				$("#commentsText").attr("class", "my_hidden");
+				$("#comments").hide(250);
+			} else {
+				$("#commentsText").attr("class", "showed");
+				$("#comments").show(250);
 			}
 		});
-		$.ajax({
-			method: "POST",
-			url: "/post_comment.php",
-			data: { type: "get", link: "{{params}}" }
-		})
-		.done(function (all_posts) {
-			//alert (all_posts);
-			let all = JSON.parse (all_posts);
-			$("#comments_container").html ("");
-			for (let x in all)
+		var number_of_comments = 0;
+		$.ajax(
 			{
-				$("#comments_container").html ($("#comments_container").html () + "<div id=" + x + "><h4><b>" + all [x].author + " <small style='float: right;'><time>" + all[x].time + " </time></small></b></h4><p>" + all[x].text + "</p></div><hr>");
-			}
-		});
-		$("#publish").click (function ()
-		{
-			if ($("#name").val() === "" || $("#name").val() === undefined)
-			{
+				method: "POST",
+					url: "/post_comment.php",
+					data: {
+						type: "get",
+						got: "0",
+						link: "{{params}}"
+					},
+					success: function(all_posts) {
+						let all = JSON.parse(all_posts);
+							$("#comments_container").html("");
+							for (let x in all) {
+								$("#comments_container").html($("#comments_container").html() + "<div id=" + x + "><h4><b>" + all[x].author + " <small style='float: right;'><time>" + all[x].time + " </time></small></b></h4><p>" + all[x].text + "</p></div><hr>");
+								window.number_of_comments = +x + 1;
+							}
+						}
+				}
+			);
+		$("#publish").click(function() {
+			if ($("#name").val() === "" || $("#name").val() === undefined) {
 				let name = prompt("What is your name?");
-				$.cookie("name", name, { expires : 1, path: '/' });
-				$("#name").val (name);
+				$.cookie("name", name, {
+					expires: 1,
+					path: '/'
+				});
+				$("#name").val(name);
 			}
 			$.ajax({
-			method: "POST",
-			url: "/post_comment.php",
-			data: { type: "post", author: $("#name").val (), text: $("#comment").val (), link: "{{params}}" }
-		})
-		.done(function (all_posts) {
-			//alert("Data Saved: " + all_posts);
-			let all = JSON.parse (all_posts);
-			$("#comments_container").html ("");
-			for (let x in all)
-			{
-				$("#comments_container").html ($("#comments_container").html () + "<div id=" + x + "><h4><b>" + all [x].author + " <small style='float: right'><time>" + all[x].time + " </time></small></b></h4><p>" + all[x].text + "</p></div><hr>");
-			}
-			$("#number").html (parseInt ($("#number").html ()) + 1);
-		});
-		$("#comment").val("");
+				method: "POST",
+					url: "/post_comment.php",
+					data: {
+						type: "post",
+						got: window.number_of_comments,
+						author: $("#name").val(),
+						text: $("#comment").val(),
+						link: "{{params}}"
+					},
+					success: function(all_posts) {
+						//alert (all_posts);
+							let all = JSON.parse(all_posts);
+							for (let x in all) {
+								$("#comments_container").html($("#comments_container").html() + "<div id=" + (1 + window.number_of_comments) + "><h4><b>" + all[x].author + " <small style='float: right;'><time>" + all[x].time + " </time></small></b></h4><p>" + all[x].text + "</p></div><hr>");
+								window.number_of_comments ++;
+							}
+						}
+				});
+			$("#comment").val("");
 		});
